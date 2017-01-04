@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+<h2>User Login</h2>
+    <form method="post" action="/login_action/">
+    用户名：
+    <input name="username" type="text"><br><br>
+    密码：
+    <input name="password" type="password"><br><br>
+    <button id="btn" type="submit" >login</button><br>{{ error }}
+    {% csrf_token %}
+</form>
+{% endblock %}
+</html>
