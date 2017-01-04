@@ -13,7 +13,12 @@ from django.views.generic import TemplateView
 def index(request):
     blog_list = Blog. objects. all()
     username = request.session.get('name', '')
-    return render_to_response('index.html', {'myname': username, 'blogs': blog_list})
+    print 'username'
+    print username
+    if username:
+        return render_to_response('index.html', {'myname': username, 'blogs': blog_list})
+    else:
+        return render(request, "login.html")
 
 
 def login(request):
