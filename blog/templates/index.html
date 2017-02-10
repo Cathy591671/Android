@@ -8,5 +8,14 @@
     <p>{{ blog.timestamp }} </p>
 
 {% endfor %}
+
+<form enctype="multipart/form-data" action="/upload_file/" method="post">
+    {% csrf_token %}
+   <input type="file" name="myfile" />
+   <br/>
+   <input type="submit" value="upload"/>
+
+</form>
+
 </body>
 </html>

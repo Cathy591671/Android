@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'^login_action/$', views.login_action),
     url(r'^logout/$', views.logout),
     url(r'^accounts/login/$', views.login),
+    url(r'^upload_file/$', views.uploadfile),
 ]

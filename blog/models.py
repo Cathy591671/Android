@@ -11,5 +11,12 @@ class Blog(models. Model):
     class Admin:
         def __init__(self):
             pass
+'''
+class File(models.Model):
+    filename=models.CharField(max_length=30)
+    fileway=models.FileField('C:\Users\Cathy\PycharmProjects\connect')
 
+    def __str__(self):
+        return self.filename
+'''
 admin. site. register(Blog)
